@@ -1,10 +1,5 @@
 version: 0.2
-phases:
-  install:
-    runtime-versions:
-      java: corretto17
-    commands:
-      - echo Nothing to do in the install phase
+phases:  
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase
