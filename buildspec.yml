@@ -1,15 +1,16 @@
 version: 0.2
 phases:
-  install:
-    runtime-versions:
-      java: corretto17
+  runtime-versions:
+      java: openjdk8
+    commands:
+      - pip install --upgrade awscli
   pre_build:
     commands:
     - echo In the pre_build phase.....
   build:
     commands:
     - echo Build started on1 `date`
-    - mvn install
+    - mvn clean install
   post_build:
     commands:
     - echo Build complete on1 `date`    
