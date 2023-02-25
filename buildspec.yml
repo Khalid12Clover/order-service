@@ -1,19 +1,20 @@
 version: 0.2
 phases:
-  runtime-versions:
+  install:
+    runtime-versions:
       java: openjdk8
     commands:
       - pip install --upgrade awscli
   pre_build:
     commands:
-    - echo In the pre_build phase.....
+      - echo In the pre_build phase.....
   build:
     commands:
-    - echo Build started on1 `date`
-    - mvn clean install
+      - echo Build started on1 `date`
+      - mvn clean install
   post_build:
     commands:
-    - echo Build complete on1 `date`    
+      - echo Build complete on1 `date`
 artifacts:
   files:
     - target/order-service.jar
