@@ -1,19 +1,13 @@
 version: 0.2
+
 phases:
-  install:
-    runtime-versions:
-      java: corretto17
-  pre_build:
-    commands:
-    - echo In the pre_build phase.....
   build:
     commands:
-    - echo Build started on1 `date`
-    - mvn test
+      - echo Enter the phase...
+      - mvn clean package
   post_build:
     commands:
-    - echo Build complete on1 `date`
-    - mvn package
+      - Build completed successfully...
 artifacts:
   files:
     - target/order-service.jar
