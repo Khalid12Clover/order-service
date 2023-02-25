@@ -9,7 +9,7 @@ phases:
   build:
     commands:
     - echo Build started on1 `date`
-    - mvn clean install
+    - mvn install
   post_build:
     commands:
     - echo Build complete on1 `date`    
