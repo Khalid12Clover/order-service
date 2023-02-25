@@ -6,7 +6,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - mvn clean package
+      - mvn clean install
 
   post_build:
     commands:
@@ -16,5 +16,3 @@ artifacts:
   files:
     - target/order-service.jar
   discard-paths: yes
-
-
