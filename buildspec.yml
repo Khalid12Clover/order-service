@@ -1,17 +1,16 @@
 version: 0.2
-
-
 phases:
+  pre_build:
+    commands:
+    - echo In the pre_build phase.....
   build:
     commands:
-      - echo Build started on `date`
-      - echo Building the Docker image...
-      - mvn clean install
-
+    - echo Build started on1 `date`
+    - mvn test
   post_build:
     commands:
-      - echo Build completed sucessfully
-
+    - echo Build complete on1 `date`
+    - mvn package
 artifacts:
   files:
     - target/order-service.jar
