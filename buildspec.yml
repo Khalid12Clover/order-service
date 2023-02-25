@@ -1,14 +1,20 @@
 version: 0.2
-
 phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+      - echo Nothing to do in the install phase
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase
   build:
     commands:
-      - echo Enter the phase...
-      - mvn clean package
+      - echo build started on 'date'
+      - mvn install
   post_build:
     commands:
-      - Build completed successfully...
+      - echo build completed on 'date'
 artifacts:
   files:
-    - target/order-service.jar
-  discard-paths: yes
+    - 'target/order-service.jar'
