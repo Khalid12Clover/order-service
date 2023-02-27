@@ -1,0 +1,15 @@
+version: 0.2
+phases:  
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase
+  build:
+    commands:
+      - echo build started on 'date'
+      - mvn clean install
+  post_build:
+    commands:
+      - echo build completed on 'date'
+artifacts:
+  files:
+    - 'target/order-service.jar'
